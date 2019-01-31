@@ -14,8 +14,10 @@ export default function(state = initialState, action) {
             items: action.payload
         };
         case NEW_POST: 
+            console.log("post reducing now");
             return {
-
+                ...state,
+                item: action.payload
         };
         default: 
             return state;
